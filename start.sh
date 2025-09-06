@@ -41,6 +41,8 @@ while true; do
     -u "$VPN_USERNAME" \
     --passwd-on-stdin \
     --useragent "AnyConnect whatever" \
+    -s "$(which vpn-slice) $SPLIT_ROUTES" \
+    --syslog
 
   # 如果 openconnect 进程退出（例如断线或服务器问题），循环会继续
   echo "VPN 已断开。将在 10 秒后尝试重新连接..."
