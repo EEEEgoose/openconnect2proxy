@@ -30,7 +30,8 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ${{ secrets.DOCKERHUB_USERNAME }}/alpine-proxy-vpn # 替换为 "你的用户名/你的镜像名"
+          images: ${{ secrets.DOCKERHUB_USERNAME }}/
+openconnect2proxy # 替换为 "你的用户名/你的镜像名"
 
       # 第四步：构建并推送 Docker 镜像
       - name: Build and push Docker image
